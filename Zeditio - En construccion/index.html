@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zeditio Software</title>
+    <!-- responsive propio -->
+    <!-- AL FINAL LO HICE REPONSIVE SIN EL META DATA, NOSE COMO HACERLO DE OTRA FORMA 
+    https://css-tricks.com/snippets/css/media-queries-for-standard-devices/-->
+    <!-- <meta name="viewport" content="width=device-width" /> -->
+     <meta name="viewport" content="width=device-width , initial-scale=1" />
+
+    <!-- inicio icono-->
+    <!-- hojas de estilo propias-->
+    <link rel="stylesheet" type="text/css" href="Resources/css/estilo.css" />
+    <!-- animacion de imagenes-->
+    <link rel="stylesheet" type="text/css" href="Resources/css/animate.css" />
+
+    <!-- particulas-->
+    <link rel="stylesheet" media="screen" href="Resources/particulas/style-particulas.css">
+    <!-- Full page enlace-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="vresources/endors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="Resources/fullPage/jquery.fullPage.js"></script>
+    <!-- ESTE CODIGO SE EJECUTA CADA VEZ QUE HAGO SCROL, ENTONCE PREGUNTA EN QUE SECCION ESTOY-->
+    <!-- SI ESTOY EN LA SECCION 2 AGREGO LA ANIMACION Y REMUEVO LA CLASE QUE HACE INVISIBLE A LOS OBJETOS-->
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            'afterLoad': function(anchorLink, index){
+                if(index == 2){
+                    $('.aparecerDeAbajo1').addClass('animated bounceInUp');
+                    $('.invisible1').removeClass('invisible1');
+                }
+                /*VOY A TENER VARIOS APARECER E INVISIBLES PARA NO VOLVER A AGREGARLOS EN CADA SCROLL*/
+                if(index == 3){
+                    $('.aparecerDeAbajo2').addClass('animated bounceInUp');
+                    $('.aparecerDerecha').addClass('animated bounceInRight');
+                    $('.aparecerIzquierda').addClass('animated bounceInLeft');
+                    $('.invisible2').removeClass('invisible2');
+                }
+                if(index == 4){
+                    $('.agitar').addClass('animated shake');
+                }
+
+            },
+        });
+    });
+    </script>
+
+</head>
+<!--BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY-->
+<body>
+    <div id="fullpage">
+        <!-- SECCION 1 - HOME -->
+        <div class="section" id="section1">
+            <!-- CONTENEDOR DE PARTICULAS -->
+            <div id="particles-js">
+                <div class="imagenPrincipal">
+                    <img src="Resources/img/logoBlanco.png">
+                    <h1>Zeditio</h1>
+                    <h3>"If you can imagine it, we can code it"</h3>
+                </div>      
+            </div>
+        </div>
+
+        
+    <!-- SECCION 4 - CONTACTO -->
+    <!-- DIBUJA UNA FILA CON 50% DE LA PANTALLA -->
+    <div class="section" id="section4">
+        <div class="row">
+            <div class="data">
+                <a href="https://goo.gl/maps/XDpXHU3KYRL2">
+                    <img src="Resources/img/pin56.png"/>
+                    <h1 style="color:black" >Cordoba, Cordoba, Argentina</h1>
+                </a>
+            </div>          
+        </div>
+        <!-- DIBUJA UNA FILA CON 10% DE LA PANTALLA -->
+
+        <div class="rowcolumn">
+
+            <div class="data">
+                <h1 style="color:black">CONTACTANOS</h1>
+            </div>
+
+        </div>
+        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y PARTE VERTICALMETEN EN 2 (50%)-->
+
+        <div class="row2column">
+
+            <div class="data">
+                <a href="tel:+543535644404">
+                    <img src="Resources/img/whatsapp.png" class="agitar"/>
+                </a>
+                <h1>+54-353-5 64 44 04</h1>
+
+            </div>
+
+        </div>
+        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y PARTE VERTICALMETEN EN 2 (50%)-->
+        <div class="row2column">
+            <div class="data">
+               <a href="mailto:joseboretto@gmail.com?subject=Solicitud Zeditio">
+                <img src="Resources/img/email19.png" class="agitar"/>
+            </a>
+            <h1>joseboretto@gmail.com</h1>
+            
+        </div>     
+        
+    </div>
+</div>
+<!-- LIBRERIAS PARA LAS PARTICULAS-->
+
+<script src="Resources/particulas/particles.js"></script>
+<script src="Resources/particulas/js/app.js"></script> 
+
+</body> 
+
+
+</html>
