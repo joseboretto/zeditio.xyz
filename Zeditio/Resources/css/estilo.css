@@ -6,10 +6,87 @@
 /*TODA LA PAGINA VA A TENER ESTE FOMATO*/
 * {
 	font-family: Raleway Thin;
-	color: white;
 	text-align: center;
 }
+
+
+/*SEGURO QUE HAY METODO MAS INTELIGENTE DE MANEJAR LAS COSAS RESPONSIVAS. NO SE ME OCURRE OTRA COSA LPM*/
+/*si la pantalla es mejnor entra a la condicion*/
+/*el mas grande va primero*/
+/* Landscape phones and down */
+/* ----------- iPad  ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+	body h1 {
+		font-size: 5em;}
+
+	body h3{
+		font-size: 3em;}
+
+}
+/* ----------- Galaxy Tab 10.1 ----------- */
+
+/* Portrait and Landscape */
+@media (min-device-width: 800px) and (max-device-width: 1280px) {
+	body h1 {
+		font-size: 5em;}
+
+	body h3{
+		font-size: 3em;}
+
+}/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+	body h1 {
+		font-size: 2em;}
+	#section4 h1 {
+		font-size: 2em;}
+
+	body h3{
+		font-size: 1em;}
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) { 
+	body h1 {
+		font-size: 2em;}
+	#section4 h1 {
+		font-size: 2em;}
+
+	body h3{
+		font-size: 1em;}
+
+}
+
+
+
+/* ----------- Galaxy S5 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (min-device-width: 360px) and (max-device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+	body h1 {
+		font-size: 2em;}
+	#section4 h1 {
+		font-size: 2em;}
+
+	body h3{
+		font-size: 1em;}
+
+}
+
+
+
+
 /*USE SOLO H1 Y H3 PORQUE LA LETRA ERA TAN FINITA QUE CON <P> NO SE LEIA*/
+html,body
+{
+  height: 100%;
+}
 body h1 {
 	font-size: 4em;
 }
@@ -20,32 +97,17 @@ body h3{
 	padding-left: 10%;
 }
 
-/*SEGURO QUE HAY METODO MAS INTELIGENTE DE MANEJAR LAS COSAS RESPONSIVAS. NO SE ME OCURRE OTRA COSA LPM*/
-/*si la pantalla es mejnor entra a la condicion*/
-/*el mas grande va primero/
-
-@media (max-width: 1600px) {
-	body h1 {
-		font-size: 6em;}
-
-	body h3{
-		font-size: 4em;}
-}
-*/
-@media (max-width: 1000px) {
-	body h1 {
-		font-size: 4.5em;}
-	#section4 h1 {
-		font-size: 3.5em;}
-
-	body h3{
-		font-size: 2.5em;}
+img {
+    max-width:100%; 
+  	max-height:100%;
+  	margin:auto;
 }
 
 
 
 /*PARA DARLE POSICION A EL LOGO*/
 .imagenPrincipal{
+	color:white;
     position: absolute;
     top: 50%;  /* position the top  edge of the element at the middle of the parent */
     left: 50%; /* position the left edge of the element at the middle of the parent */
@@ -67,23 +129,10 @@ body h3{
 /* arme un gradiente del negro y que a medida que cambia de seccion va cambiando el color*/
 /* http://www.css3factory.com/linear-gradients/ */
 #section2{
-	background-image: -o-linear-gradient(top, #D13232 20%, #662020 60%, #000000 95%);
-	background-image: -moz-linear-gradient(top, #D13232 20%, #662020 60%, #000000 95%);
-	background-image: -webkit-linear-gradient(top, #D13232 20%, #662020 60%, #000000 95%);
-	background-image: -ms-linear-gradient(top, #D13232 20%, #662020 60%, #000000 95%);
-	background-image: linear-gradient(to top, #D13232 20%, #662020 60%, #000000 95%);
-}
-/*es la forma de partir la seccion en 2, dibujando una fila*/
-#section2 .row {
-	height: 50%;
-    width: 100%;
-    display: table;
-}
-/*es el div que esta adentro de la fila*/
-#section2 .row .data{
-	padding-top: 1%;
-	display: table-cell;
-    vertical-align: top;
+	background-color: #FDFFFC;
+	color:black;
+	
+
 }
 
 #section2 h1{
@@ -92,80 +141,39 @@ body h3{
 
 
 #section3{
-	background-image: -o-linear-gradient(bottom, #D13232 10%, #4B94CC 80%);
-	background-image: -moz-linear-gradient(bottom, #D13232 10%, #4B94CC 80%);
-	background-image: -webkit-linear-gradient(bottom, #D13232 10%, #4B94CC 80%);
-	background-image: -ms-linear-gradient(bottom, #D13232 10%, #4B94CC 80%);
-	background-image: linear-gradient(to bottom, #D13232 10%, #4B94CC 80%);
+	background-color: #E71D36;
 	text-align: center;
 }
 /*IGUAL QUE ANTES PERO CAMBIA LAS PROPORCIONES*/
-#section3 .row {
-	height: 20%;
-    width: 100%;
-    display: table;
 
-}
-
-#section3 .rowcolumn {
-	height: 5%;
-    width: 100%;
-    display: table;
-}
-/*UNA FILA CON 3 COLUMNAS*/
-#section3 .row3column {
-	float:left;
-	height: 40%;
-    width: 33%;
-    display: table;
-}
-#section3 .data {
-	padding-top: 2%;
-	display: table-cell;
-    vertical-align: top;
-}
 
 #section4{
-	background-image: -o-linear-gradient(bottom, #4B94CC 10%, #32CF54 80%);
-	background-image: -moz-linear-gradient(bottom, #4B94CC 10%, #32CF54 80%);
-	background-image: -webkit-linear-gradient(bottom, #4B94CC 10%, #32CF54 80%);
-	background-image: -ms-linear-gradient(bottom, #4B94CC 10%, #32CF54 80%);
-	background-image: linear-gradient(to bottom, #4B94CC 10%, #32CF54 80%);
+	background-color: #FF9F1C	 ;
 	color:black;
 
 }
 
-#section4 .row {
-	height: 50%;
-    width: 100%;
-    display: table;
-    background: url("../img/mapa2.jpg") no-repeat;
-    background-size: cover;
 
-}
 
-.data {
-	display: table-cell;
+
+.vcenter {
+    display: inline-block;
     vertical-align: middle;
+    float: none;
+}
+.filaCompleta {
+    height:100%;
+}
+.filaMitad {
+    height:50%;
+}
+.centradoTotal{
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
 }
 
-#section4 .rowcolumn {
-	height: 10%;
-    width: 100%;
-    display: table;
-}
 
-#section4 .row2column {
-	float:left;
-	height: 40%;
-    width: 50%;
-    display: table;
-}
-
-
-body .wow {
-
-}
 
 .invisible1{visibility: hidden;}
 .invisible2{visibility: hidden;}

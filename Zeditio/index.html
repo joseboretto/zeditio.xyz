@@ -3,20 +3,29 @@
 <head>
 	<title>Zeditio Software</title>
     <!-- responsive propio -->
-    <!-- AL FINAL LO HICE REPONSIVE SIN EL META DATA, NOSE COMO HACERLO DE OTRA FORMA -->
+    <!-- AL FINAL LO HICE REPONSIVE SIN EL META DATA, NOSE COMO HACERLO DE OTRA FORMA 
+    https://css-tricks.com/snippets/css/media-queries-for-standard-devices/-->
     <!-- <meta name="viewport" content="width=device-width" /> -->
+     <meta name="viewport" content="width=device-width , initial-scale=1" />
 
     <!-- inicio icono-->
     <!-- hojas de estilo propias-->
     <link rel="stylesheet" type="text/css" href="Resources/css/estilo.css" />
     <!-- animacion de imagenes-->
     <link rel="stylesheet" type="text/css" href="Resources/css/animate.css" />
+    <!-- BOOTSTRAP -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <!-- particulas-->
     <link rel="stylesheet" media="screen" href="Resources/particulas/style-particulas.css">
     <!-- Full page enlace-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="vresources/endors/jquery.easings.min.js"></script>
+    <script src="resources/endors/jquery.easings.min.js"></script>
     <script type="text/javascript" src="Resources/fullPage/jquery.fullPage.js"></script>
     <!-- ESTE CODIGO SE EJECUTA CADA VEZ QUE HAGO SCROL, ENTONCE PREGUNTA EN QUE SECCION ESTOY-->
     <!-- SI ESTOY EN LA SECCION 2 AGREGO LA ANIMACION Y REMUEVO LA CLASE QUE HACE INVISIBLE A LOS OBJETOS-->
@@ -52,148 +61,118 @@
         <!-- SECCION 1 - HOME -->
         <div class="section" id="section1">
             <!-- CONTENEDOR DE PARTICULAS -->
-            <div id="particles-js">
-                <div class="imagenPrincipal">
-                    <img src="Resources/img/logoBlanco.png">
-                    <h1>Zeditio</h1>
-                    <h3>"If you can imagine it, we can code it"</h3>
-                </div>      
-            </div>
+            
+                
+                    <div id="particles-js">
+                        <div class="imagenPrincipal">
+
+                            <img src="Resources/img/logoBlanco.png" alt="Smiley face" style=max-width:100%;>
+                            <h1>Zeditio</h1>
+                            <h3>"If you can imagine it, we can code it"</h3>
+                        </div>    
+                    </div>  
+                
+            
         </div>
 
         <!-- SECCION 2 - SERVICIOS -->
         <div class="section wow" id="section2">
-            <!-- DIBUJA UNA FILA CON LA MITAD DE LA PANTALLA -->
-            <div class="row">
-                <!-- CON DATA VOY A PODER CENTAR VERTICALMENTE EL CONTENIDO -->
-                <div class="data">
-                    <img src="Resources/img/computer105.png" class="aparecerDeAbajo1 invisible1"/>
-                    <!-- COPIAR EL PROCESO DE http://www.globant.com/ Y AGREGAR IMAGENES-->
-                    <h1>Soluciones de Tecnologia e Informacion</h1>
-                    <br>
-                    <h3>Somos los encargados de analizar su empresa, entender el negocio junto con el usuario final del prodcuto, para determinar la solucion mas apropiada basados en UX y asi garantizar el exito del producto.</h3>
-                    <h3>Una vez definido el plan, es hora de la accion!.</h3>
-                    <h3>Nos basamos en 2 pilares fundamentales</h3>
-                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
-                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
+            <div class="row filaCompleta">
+                    <!-- CON DATA VOY A PODER CENTAR VERTICALMENTE EL CONTENIDO -->
+                    <span class="col-xs-1 col-sm-3 centradoTotal"></span>
+                    <div class="col-xs-10 col-sm-6 centradoTotal">
+                        <img src="Resources/img/computer105.png" class="aparecerDeAbajo1 invisible1" style=max-width:100%;>
+                        <!-- COPIAR EL PROCESO DE http://www.globant.com/ Y AGREGAR IMAGENES-->
+                        <h1>Soluciones de Tecnologia e Informacion</h1>
+                        <br>
+                        <h3>Somos los encargados de analizar su empresa, entender el negocio junto con el usuario final del prodcuto, para determinar la solucion mas apropiada basados en UX y asi garantizar el exito del producto.</h3>
+                        <h3>Una vez definido el plan, es hora de la accion!.</h3>
+                        <h3>Nos basamos en 2 pilares fundamentales</h3>
+                        <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
+                        <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
+                    </div>
 
-                </div>          
-            </div>
-            <!-- DIBUJA UNA FILA CON LA MITAD DE LA PANTALLA -->
-            <div class="row">
-                <!-- CON DATA VOY A PODER CENTAR VERTICALMENTE EL CONTENIDO -->
-                <div class="data">
-                    <img src="Resources/img/website8.png" class="aparecerDeAbajo1 invisible1" />
-                    <h1>Soluciones Graficas</h1>
-                    <h3>NACHO VOS QUE HACES?</h3>
-                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
-                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
-                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
-
-                </div>
-
+                    <span class="col-xs-1 col-sm-3 centradoTotal"></span>         
             </div>
 
 
         </div>
         <!-- SECCION 3 - SOBRE NOSOTROS Y PORQUE ELEGIRNOS -->
         <div class="section" id="section3">
-            <!-- DIBUJA UNA FILA CON 20% DE LA PANTALLA -->
-            <div class="row">
-                <!-- CON DATA VOY A PODER CENTAR VERTICALMENTE EL CONTENIDO -->
-                <div class="data">
-                    <h1>Acerca de Zeditio</h1>
-                    <h3>Vos que opinas de poner aca?? le interesa al cliente?</h3>
-                </div>          
-            </div>
-            <!-- DIBUJA UNA FILA CON 5% DE LA PANTALLA -->
 
-            <div class="rowcolumn">
-
-                <div class="data">
-                    <img src="Resources/img/human63.png"/>
-                    <h1>Porque elegirnos?</h1>
-
-                </div>
-
-            </div>
-            <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y 33% DEL LARGO PARA HACER 3 COLUMNAS -->
-
-            <div class="row3column">
-
-                <div class="data">
+            <div class="row filaCompleta">
+                <div class="col-xs-12 col-sm-4 centradoTotal">
                     <img src="Resources/img/favorite21.png" class="aparecerIzquierda invisible2"/>
                     <h1>PASION</h1>
                     <h3 style="font-style: italic">El unico modo de hacer un gran trabajo es amar lo que haces. Si no lo has encontrado todavia, sigue buscando. No te acomodes. Como con todo lo que es propio del corazon, lo sabras cuando lo encuentres.</h3>
                     <h3>-- Steve jobs</h3>
-                </div>
-            </div>
-            <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y 33% DEL LARGO PARA HACER 3 COLUMNAS -->
 
-            <div class="row3column">
-                <div class="data">
+                </div>
+
+                <div class="col-xs-12 col-sm-4 centradoTotal">
+
                     <img src="Resources/img/cash3.png" class="aparecerDeAbajo2 invisible2"/>
                     <h1>AHORRO</h1>
                     <h3>Como nuestro objetivo es hacer lo que amamos el dinero pasa a un segundo plano, lo que se refleja en un menor costo a la hora de brindarle la solucion que usted necesita.</h3>
-                </a>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-4 centradoTotal">
+
+                    <img src="Resources/img/brain5.png" class="aparecerDerecha invisible2" />
+                    <h1>CAPACIDAD</h1>
+                    <h3>Contamos con un equipo joven que se capacita dia a dia para tener la ultima tecnologia en desarrollo de software a su disposicion lo que nos permite un mejor aprovechamiento de los recursos de su empresa.</h3>
+
+                </div>
             </div>
 
-        </div>
-        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y 33% DEL LARGO PARA HACER 3 COLUMNAS -->
-        <div class="row3column">
-            <div class="data">
-                <img src="Resources/img/brain5.png" class="aparecerDerecha invisible2" />
-                <h1>CAPACIDAD</h1>
-                <h3>Contamos con un equipo joven que se capacita dia a dia para tener la ultima tecnologia en desarrollo de software a su disposicion lo que nos permite un mejor aprovechamiento de los recursos de su empresa.</h3>
-            </div>     
+                
 
-        </div>
-
+ 
 
     </div>
     <!-- SECCION 4 - CONTACTO -->
     <!-- DIBUJA UNA FILA CON 50% DE LA PANTALLA -->
     <div class="section" id="section4">
-        <div class="row">
-            <div class="data">
+
+
+        <div class="row filaMitad">
+
+            <div class="col-xs-12 centradoTotal">
                 <a href="https://goo.gl/maps/XDpXHU3KYRL2">
                     <img src="Resources/img/pin56.png"/>
                     <h1 style="color:black" >Cordoba, Cordoba, Argentina</h1>
                 </a>
-            </div>          
-        </div>
-        <!-- DIBUJA UNA FILA CON 10% DE LA PANTALLA -->
 
-        <div class="rowcolumn">
-
-            <div class="data">
-                <h1 style="color:black">CONTACTANOS</h1>
             </div>
 
         </div>
-        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y PARTE VERTICALMETEN EN 2 (50%)-->
 
-        <div class="row2column">
 
-            <div class="data">
-                <a href="tel:+543535644404">
+        <div class="row filaMitad">
+
+            <div class="col-xs-6 centradoTotal">
+                <div id="a">
+                <a href="intent://send/543535644404#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
                     <img src="Resources/img/whatsapp.png" class="agitar"/>
+                
+                    <h1>+54-353-5 64 44 04</h1>
                 </a>
-                <h1>+54-353-5 64 44 04</h1>
+                </div>
 
             </div>
 
-        </div>
-        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y PARTE VERTICALMETEN EN 2 (50%)-->
-        <div class="row2column">
-            <div class="data">
-               <a href="mailto:joseboretto@gmail.com?subject=Solicitud Zeditio">
-                <img src="Resources/img/email19.png" class="agitar"/>
-            </a>
-            <h1>joseboretto@gmail.com</h1>
-            
-        </div>     
         
+
+            <div class="col-xs-6 centradoTotal">
+                <a href="mailto:joseboretto@gmail.com?subject=Solicitud Zeditio">
+                    <img src="Resources/img/email19.png" class="agitar"/>
+                </a>
+                <h1>joseboretto@gmail.com</h1>
+                
+            </div>     
+        
+        </div>
     </div>
 </div>
 <!-- LIBRERIAS PARA LAS PARTICULAS-->
