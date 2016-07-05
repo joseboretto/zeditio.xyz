@@ -33,9 +33,9 @@
 
                   if (mq.matches) {
                       if (isMobile.Android()) {
-                          $("a").attr("href", "intent://send/+905055555#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end");
+                          $("botonEmail").attr("href", "www.facebook.com");
                       } else {
-                          $("a").attr("href", "tel:+905555555555");
+                          $("botonEmail").attr("href", "www.google.com");
 
                       }
                   };

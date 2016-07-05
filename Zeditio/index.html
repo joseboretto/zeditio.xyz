@@ -21,7 +21,8 @@
         
         <!-- hojas de estilo propias-->
         <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" />
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
+        <!-- <script src="js/lanzarWhatsaapp.js"></script>-->
+        <script src="js/clipboard.min.js"></script>
 
 
 
@@ -45,7 +46,52 @@
         <script type="text/javascript">
             $(document).ready(function() {
                 $('#fullpage').fullpage();
+               
+
             });
+
+            function comportamientoEmail() {
+                var clipboard = new Clipboard('.btnEmail', {
+                            text: function() {
+                                return 'joseboretto@gmail.com';
+                            }
+                        });
+
+                        clipboard.on('success', function(e) {
+                            console.log(e);
+                            document.getElementById('botonEmail').innerHTML = 'Email Copiado en portapapeles';
+                            document.getElementById('textoEmail').innerHTML = 'joseboretto@gmail.com';
+                        });
+
+                        clipboard.on('error', function(e) {
+                            console.log(e);
+                        });
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    window.location = "mailto:joseboretto@gmail.com?subject=Solicitud Zeditio";  } 
+                  
+            }
+
+            function comportamientoTelefono() {
+                var clipboard = new Clipboard('.btnTelefono', {
+                            text: function() {
+                                return '+5493535644404';
+                            }
+                        });
+
+                        clipboard.on('success', function(e) {
+                            console.log(e);
+                            document.getElementById('botonTelefono').innerHTML = 'Numero Copiado en portapapeles';
+                            document.getElementById('textoTelefono').innerHTML = '353-5-64 44 04';
+                        });
+
+                        clipboard.on('error', function(e) {
+                            console.log(e);
+                        });
+
+                if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                    window.location = "intent://send/+5493535644404#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end";  } 
+                 
+            }
         </script>
         <!-- FIN FULL PAGE-->
 
@@ -164,11 +210,12 @@
                           <img src="img/telefono_144.png" alt="Flowers">
                         </picture>
                         <br>
-                        <a href="intent://send/+5493535644404#Intent;scheme=smsto;package=com.whatsapp;action=android.intent.action.SENDTO;end">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                              Abrir Whatsapp
-                            </button>
-                        </a>
+                        <button onclick="comportamientoTelefono()"
+                        class="btnTelefono mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        id="botonTelefono">
+                              Ver Telefono
+                        </button>
+                        <p id="textoTelefono"></p>
                         <!-- Accent-colored raised button with ripple -->
                         
                         
@@ -184,12 +231,18 @@
                           <img src="img/email_144.png" alt="Flowers">
                         </picture>
                         <br>
-                        <a href="mailto:joseboretto@gmail.com?subject=Solicitud Zeditio">
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                              Enviar Email
-                            </button>
+                        <button onclick="comportamientoEmail()"
+                        class="btnEmail mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        id="botonEmail">
+                              Ver Email
+                        </button>
+                        <p id="textoEmail"></p>
+
+
+                        
                             
-                        </a>
+                        
+
 
                         
                         
