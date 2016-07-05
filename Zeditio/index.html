@@ -3,6 +3,8 @@
   <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="google-site-verification" content="_uj8YJFilnLvYd2wlkFUAuEQcU8tLnY4r0YP0Kp9UqU" />
+        <meta name="theme-color" content="#43619d">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -32,7 +34,7 @@
         <!-- INICIO BOTONES METARIAL - MATERIAL DESING (MDL)-->
         <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="mdl/material.css">
+        <link rel="stylesheet" href="mdl/material-mod.min.css">
         <script src="mdl/material.min.js"></script>
         
 
@@ -41,7 +43,7 @@
         <link rel="stylesheet" type="text/css" href="fullPage/jquery.fullPage.css" />
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="fullPage/vendors/jquery.easings.min.js"></script>
-        <script type="text/javascript" src="fullPage/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="fullPage/jquery.fullPage.min.js"></script>
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -59,7 +61,7 @@
 
                         clipboard.on('success', function(e) {
                             console.log(e);
-                            document.getElementById('botonEmail').innerHTML = 'Email Copiado en portapapeles';
+                            document.getElementById('botonEmail').innerHTML = 'Email Copiado';
                             document.getElementById('textoEmail').innerHTML = 'joseboretto@gmail.com';
                         });
 
@@ -80,7 +82,7 @@
 
                         clipboard.on('success', function(e) {
                             console.log(e);
-                            document.getElementById('botonTelefono').innerHTML = 'Numero Copiado en portapapeles';
+                            document.getElementById('botonTelefono').innerHTML = 'Numero Copiado';
                             document.getElementById('textoTelefono').innerHTML = '353-5-64 44 04';
                         });
 
@@ -94,6 +96,33 @@
             }
         </script>
         <!-- FIN FULL PAGE-->
+        <script type="text/javascript">
+            (function() {
+            var hm = document.createElement('script'); hm.type ='text/javascript'; hm.async = true;
+            hm.src = ('++u-heatmap-it+log-js').replace(/[+]/g,'/').replace(/-/g,'.');
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-74104605-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+        <script type="text/javascript">
+            var _mfq = _mfq || [];
+            (function () {
+            var mf = document.createElement("script"); mf.type = "text/javascript"; mf.async = true;
+            mf.src = "//cdn.mouseflow.com/projects/198281e2-d726-4d69-b6ef-bc67c89898f0.js";
+            document.getElementsByTagName("head")[0].appendChild(mf);
+          })();
+        </script>
 
 
     </head>
@@ -116,7 +145,7 @@
                               <img src="img/logo_256.png" alt="Flowers">
                             </picture>
                             <h1>Zeditio</h1>
-                            <p>"If you can imagine it, we can code it"</p>
+                            <p>"Soluciones simples a problemas complejos"</p>
                         </div>    
                 </div>
                     
@@ -130,10 +159,14 @@
                         <div class="col-xs-10 col-sm-4 ">
                             
                             <!-- COPIAR EL PROCESO DE http://www.globant.com/ Y AGREGAR IMAGENES-->
-                            <h1>Soluciones de Tecnologia e Informacion</h1>
+                            <h1>Quienes somos?</h1>
                             <br>
-                            <p>Somos los indicado para de analizar su empresa, entender el negocio junto con el usuario final del prodcuto, para determinar la solucion mas apropiada basados en nuestra experiencia garantizando el exito del producto.</p>
-                            <p></p>
+                            <p>Somos una consultora de software que tiene la solucion a sus problemas de IT. Son dos los rieles que guian cada uno de nuestros proyectos.</p>
+
+                            <p style="text-align: left;"> <u>Simplicidad:</u> Hoy en dia menos es mas, es por eso que encontramos la eficacia maxima con un esfuerzo minimo, la respuesta mas clara en el mundo complejo de los sistemas y los negocios.</p>
+                            
+                            <p style="text-align: left;"> <u>Rapidez:</u> Lanzamos la solucion lo antes posibles para poder retroalimentarnos del usuario final y asi validar lo planeado con la realidad sin perder tiempo en congeturas garatizando el exito del proyecto.
+                            </p>
                             
 
                             
@@ -259,8 +292,10 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- PARTICULAS, UNO FUNCIONA EL OTRO CONFIGURA -->
-    <script src="particulas/particles.js"></script>
-    <script src="particulas/app.js"></script> 
+    <script src="particulas/particles.min.js"></script>
+    <script src="particulas/app.js"></script>
+
+
 
 
     </body> 
