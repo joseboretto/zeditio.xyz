@@ -1,0 +1,39 @@
+*{
+	text-align: center;
+	font-size: 1em;
+	color: white;
+
+}
+
+#fondo1{
+	background-color: #122337 ;
+}
+
+#fondo2{
+	background-image: url("../img/backgroud3.jpg");
+	
+    height: 100%;
+	background-size: 100% 100%;
+}
+
+#fondo3{
+	background-color: #6d45c0 ;
+}
+
+#fondo4{
+	background-image: url("../img/mapa2.jpg");
+}
+
+#fondo5{
+	background-color: #43619d ;
+}
+
+.pesoFilaMitad {
+    height:50%;
+}
+
+.centradoTotal{
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+}
