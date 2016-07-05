@@ -1,36 +1,70 @@
+/*USO UNA FUENTE MAS FINITA PORQUE ME GUSTA MAS*/
 @font-face {
     font-family: Raleway Thin;
-    src: url("../Raleway Thin.otf");
+    src: url("../font/Raleway Thin.otf");
 }
-
+/*TODA LA PAGINA VA A TENER ESTE FOMATO*/
 * {
 	font-family: Raleway Thin;
-	color:white;
-}
-
-#section1{
-	background-color: transparent;
+	color: white;
 	text-align: center;
 }
+/*USE SOLO H1 Y H3 PORQUE LA LETRA ERA TAN FINITA QUE CON <P> NO SE LEIA*/
+body h1 {
+	font-size: 4em;
+}
 
+body h3{
+	font-size: 2em;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+
+/*SEGURO QUE HAY METODO MAS INTELIGENTE DE MANEJAR LAS COSAS RESPONSIVAS. NO SE ME OCURRE OTRA COSA LPM*/
+/*si la pantalla es mejnor entra a la condicion*/
+/*el mas grande va primero/
+
+@media (max-width: 1600px) {
+	body h1 {
+		font-size: 6em;}
+
+	body h3{
+		font-size: 4em;}
+}
+*/
+@media (max-width: 1000px) {
+	body h1 {
+		font-size: 4.5em;}
+	#section4 h1 {
+		font-size: 3.5em;}
+
+	body h3{
+		font-size: 2.5em;}
+}
+
+
+
+/*PARA DARLE POSICION A EL LOGO*/
 .imagenPrincipal{
     position: absolute;
     top: 50%;  /* position the top  edge of the element at the middle of the parent */
     left: 50%; /* position the left edge of the element at the middle of the parent */
     transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
-  
 }
-
+/*EN EL HOME VA A SER MAS GRANDE LA LETRA*/
 .imagenPrincipal h1{
-	font-size: 500px;
-
+	font-size: 11em;
 }
 
-.imagenPrincipal p{
+.imagenPrincipal h3{
 	font-style: italic;
-	font-size: 5em;
+	font-size: 4em;
+	padding-right: 0;
+	padding-left: 0;
 }
 
+
+/* arme un gradiente del negro y que a medida que cambia de seccion va cambiando el color*/
 /* http://www.css3factory.com/linear-gradients/ */
 #section2{
 	background-image: -o-linear-gradient(top, #D13232 20%, #662020 60%, #000000 95%);
@@ -38,28 +72,24 @@
 	background-image: -webkit-linear-gradient(top, #D13232 20%, #662020 60%, #000000 95%);
 	background-image: -ms-linear-gradient(top, #D13232 20%, #662020 60%, #000000 95%);
 	background-image: linear-gradient(to top, #D13232 20%, #662020 60%, #000000 95%);
-	text-align: center;
 }
+/*es la forma de partir la seccion en 2, dibujando una fila*/
 #section2 .row {
 	height: 50%;
     width: 100%;
     display: table;
 }
-
+/*es el div que esta adentro de la fila*/
 #section2 .row .data{
+	padding-top: 1%;
 	display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
-#section2 h3{
-	font-size: 45em;
+#section2 h1{
 	text-decoration: underline;
 }
-#section2 p{
-	font-size: 2em;
 
-
-}
 
 #section3{
 	background-image: -o-linear-gradient(bottom, #D13232 10%, #4B94CC 80%);
@@ -69,6 +99,7 @@
 	background-image: linear-gradient(to bottom, #D13232 10%, #4B94CC 80%);
 	text-align: center;
 }
+/*IGUAL QUE ANTES PERO CAMBIA LAS PROPORCIONES*/
 #section3 .row {
 	height: 20%;
     width: 100%;
@@ -76,23 +107,12 @@
 
 }
 
-#section3 h1{
-	font-size: 4em;
-}
-
-#section3 p{
-	font-size: 2em;
-	padding-right: 10%;
-	padding-left: 10%;
-}
-
-
 #section3 .rowcolumn {
 	height: 5%;
     width: 100%;
     display: table;
 }
-
+/*UNA FILA CON 3 COLUMNAS*/
 #section3 .row3column {
 	float:left;
 	height: 40%;
@@ -100,7 +120,7 @@
     display: table;
 }
 #section3 .data {
-	padding-top: 5%;
+	padding-top: 2%;
 	display: table-cell;
     vertical-align: top;
 }
@@ -111,14 +131,15 @@
 	background-image: -webkit-linear-gradient(bottom, #4B94CC 10%, #32CF54 80%);
 	background-image: -ms-linear-gradient(bottom, #4B94CC 10%, #32CF54 80%);
 	background-image: linear-gradient(to bottom, #4B94CC 10%, #32CF54 80%);
-	text-align: center;
+	color:black;
+
 }
 
 #section4 .row {
 	height: 50%;
     width: 100%;
     display: table;
-    background: url("../mapa.jpg") no-repeat;
+    background: url("../img/mapa2.jpg") no-repeat;
     background-size: cover;
 
 }
@@ -142,5 +163,12 @@
 }
 
 
+body .wow {
+
+}
+
+.invisible1{visibility: hidden;}
+.invisible2{visibility: hidden;}
+.invisible3{visibility: hidden;}
 
 

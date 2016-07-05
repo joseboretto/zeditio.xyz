@@ -1,138 +1,207 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Zeditio Software</title>
-	<meta name="author" content="Alvaro Trigo Lopez" />
-	<meta name="description" content="fullPage full-screen navigation and sections control menu." />
-	<meta name="keywords"  content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
-	<meta name="Resource-type" content="Document" />
+    <!-- responsive propio -->
+    <!-- AL FINAL LO HICE REPONSIVE SIN EL META DATA, NOSE COMO HACERLO DE OTRA FORMA -->
+    <!-- <meta name="viewport" content="width=device-width" /> -->
 
+    <!-- inicio icono-->
+    <!-- hojas de estilo propias-->
+    <link rel="stylesheet" type="text/css" href="Resources/css/estilo.css" />
+    <!-- animacion de imagenes-->
+    <link rel="stylesheet" type="text/css" href="Resources/css/animate.css" />
 
-	<link rel="stylesheet" type="text/css" href="fullPage/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="fullPage/examples.css" />
-	<style>
+    <!-- particulas-->
+    <link rel="stylesheet" media="screen" href="Resources/particulas/style-particulas.css">
+    <!-- Full page enlace-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="vresources/endors/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="Resources/fullPage/jquery.fullPage.js"></script>
+    <!-- ESTE CODIGO SE EJECUTA CADA VEZ QUE HAGO SCROL, ENTONCE PREGUNTA EN QUE SECCION ESTOY-->
+    <!-- SI ESTOY EN LA SECCION 2 AGREGO LA ANIMACION Y REMUEVO LA CLASE QUE HACE INVISIBLE A LOS OBJETOS-->
 
-	/* Style for our header texts
-	* --------------------------------------- */
-	h1{
-		font-size: 10em;
-		font-family: arial,helvetica;
-		color: #fff;
-		margin:0;
-		padding:0;
-	}
-	h2{
-		font-size: 5em;
-		font-family: arial,helvetica;
-		color: #000;
-		margin:0;
-		padding:0;
-	}
-	p{
-		font-size: 4em;
-		font-style: italic;
-		color: #C63D0F;
-	}
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            'afterLoad': function(anchorLink, index){
+                if(index == 2){
+                    $('.aparecerDeAbajo1').addClass('animated bounceInUp');
+                    $('.invisible1').removeClass('invisible1');
+                }
+                /*VOY A TENER VARIOS APARECER E INVISIBLES PARA NO VOLVER A AGREGARLOS EN CADA SCROLL*/
+                if(index == 3){
+                    $('.aparecerDeAbajo2').addClass('animated bounceInUp');
+                    $('.aparecerDerecha').addClass('animated bounceInRight');
+                    $('.aparecerIzquierda').addClass('animated bounceInLeft');
+                    $('.invisible2').removeClass('invisible2');
+                }
+                if(index == 4){
+                    $('.agitar').addClass('animated shake');
+                }
 
-
-	/* Centered texts in each section
-	* --------------------------------------- */
-	.section{
-		text-align:center;
-	}
-
-
-	/* Backgrounds will cover all the section
-	* --------------------------------------- */
-	.section{
-		background-size: cover;
-	}
-	.slide{
-		background-size: cover;
-	}
-
-	/* Defining each section background and styles
-	* --------------------------------------- */
-	#section0{
-		background-image: url(bg2.jpg);
-		text-shadow: 0px 0px 100px #000;
-		padding: 10% 0 0 0;
-	}
-
-	#section1{
-		background-color: #C63D0F;
-		padding: 6% 0 0 0;
-	}
-	#section1 p{
-		color: #fff;
-	}
-
-	#section2{
-		background-color: #01020d;
-		padding: 6% 0 0 0;
-	}
-	#section3 h1{
-		color: #000;
-	}
-
-
- 	/*Adding background for the slides
-	* --------------------------------------- */
-	#slide1{
-		background-image: url(imgs/bg2.jpg);
-		padding: 6% 0 0 0;
-	}
-	#slide2{
-		background-image: url(imgs/bg5.jpg);
-		padding: 6% 0 0 0;
-	}
-
-
-	/* Bottom menu
-	* --------------------------------------- */
-	#infoMenu li a {
-		color: #fff;
-	}
-	</style>
-
-	<!--[if IE]>
-		<script type="text/javascript">
-			 var console = { log: function() {} };
-		</script>
-	<![endif]-->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="fullPage/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="fullPage/examples.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				verticalCentered: false
-
-			});
-		});
-	</script>
+            },
+        });
+    });
+    </script>
 
 </head>
+<!--BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY BODY-->
 <body>
+    <div id="fullpage">
+        <!-- SECCION 1 - HOME -->
+        <div class="section" id="section1">
+            <!-- CONTENEDOR DE PARTICULAS -->
+            <div id="particles-js">
+                <div class="imagenPrincipal">
+                    <img src="Resources/img/logoBlanco.png">
+                    <h1>Zeditio</h1>
+                    <h3>"If you can imagine it, we can code it"</h3>
+                </div>      
+            </div>
+        </div>
 
-<div id="fullpage">
-	<div class="section " id="section0"><h1>Zeditio</h1>
-		<p>"Software para el mundo"</p>
-	</div>
+        <!-- SECCION 2 - SERVICIOS -->
+        <div class="section wow" id="section2">
+            <!-- DIBUJA UNA FILA CON LA MITAD DE LA PANTALLA -->
+            <div class="row">
+                <!-- CON DATA VOY A PODER CENTAR VERTICALMENTE EL CONTENIDO -->
+                <div class="data">
+                    <img src="Resources/img/computer105.png" class="aparecerDeAbajo1 invisible1"/>
+                    <!-- COPIAR EL PROCESO DE http://www.globant.com/ Y AGREGAR IMAGENES-->
+                    <h1>Soluciones de Tecnologia e Informacion</h1>
+                    <br>
+                    <h3>Somos los encargados de analizar su empresa, entender el negocio junto con el usuario final del prodcuto, para determinar la solucion mas apropiada basados en UX y asi garantizar el exito del producto.</h3>
+                    <h3>Una vez definido el plan, es hora de la accion!.</h3>
+                    <h3>Nos basamos en 2 pilares fundamentales</h3>
+                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
+                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
 
-	<div class="section" id="section1"><h2>Que hacemos?</h2>
-			<p>Somos un equipo preparado para brindarle las soluciones de software
-			 que usted necesita</p></div>
-	<div class="section" id="section2"><h1>Expect Us!</h1>
-			
-			</div>
+                </div>          
+            </div>
+            <!-- DIBUJA UNA FILA CON LA MITAD DE LA PANTALLA -->
+            <div class="row">
+                <!-- CON DATA VOY A PODER CENTAR VERTICALMENTE EL CONTENIDO -->
+                <div class="data">
+                    <img src="Resources/img/website8.png" class="aparecerDeAbajo1 invisible1" />
+                    <h1>Soluciones Graficas</h1>
+                    <h3>NACHO VOS QUE HACES?</h3>
+                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
+                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
+                    <h3>Metodologias agiles de desarrollo para validar rapidamente el producto</h3>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <!-- SECCION 3 - SOBRE NOSOTROS Y PORQUE ELEGIRNOS -->
+        <div class="section" id="section3">
+            <!-- DIBUJA UNA FILA CON 20% DE LA PANTALLA -->
+            <div class="row">
+                <!-- CON DATA VOY A PODER CENTAR VERTICALMENTE EL CONTENIDO -->
+                <div class="data">
+                    <h1>Acerca de Zeditio</h1>
+                    <h3>Vos que opinas de poner aca?? le interesa al cliente?</h3>
+                </div>          
+            </div>
+            <!-- DIBUJA UNA FILA CON 5% DE LA PANTALLA -->
+
+            <div class="rowcolumn">
+
+                <div class="data">
+                    <img src="Resources/img/human63.png"/>
+                    <h1>Porque elegirnos?</h1>
+
+                </div>
+
+            </div>
+            <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y 33% DEL LARGO PARA HACER 3 COLUMNAS -->
+
+            <div class="row3column">
+
+                <div class="data">
+                    <img src="Resources/img/favorite21.png" class="aparecerIzquierda invisible2"/>
+                    <h1>PASION</h1>
+                    <h3 style="font-style: italic">El unico modo de hacer un gran trabajo es amar lo que haces. Si no lo has encontrado todavia, sigue buscando. No te acomodes. Como con todo lo que es propio del corazon, lo sabras cuando lo encuentres.</h3>
+                    <h3>-- Steve jobs</h3>
+                </div>
+            </div>
+            <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y 33% DEL LARGO PARA HACER 3 COLUMNAS -->
+
+            <div class="row3column">
+                <div class="data">
+                    <img src="Resources/img/cash3.png" class="aparecerDeAbajo2 invisible2"/>
+                    <h1>AHORRO</h1>
+                    <h3>Como nuestro objetivo es hacer lo que amamos el dinero pasa a un segundo plano, lo que se refleja en un menor costo a la hora de brindarle la solucion que usted necesita.</h3>
+                </a>
+            </div>
+
+        </div>
+        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y 33% DEL LARGO PARA HACER 3 COLUMNAS -->
+        <div class="row3column">
+            <div class="data">
+                <img src="Resources/img/brain5.png" class="aparecerDerecha invisible2" />
+                <h1>CAPACIDAD</h1>
+                <h3>Contamos con un equipo joven que se capacita dia a dia para tener la ultima tecnologia en desarrollo de software a su disposicion lo que nos permite un mejor aprovechamiento de los recursos de su empresa.</h3>
+            </div>     
+
+        </div>
+
+
+    </div>
+    <!-- SECCION 4 - CONTACTO -->
+    <!-- DIBUJA UNA FILA CON 50% DE LA PANTALLA -->
+    <div class="section" id="section4">
+        <div class="row">
+            <div class="data">
+                <a href="https://goo.gl/maps/XDpXHU3KYRL2">
+                    <img src="Resources/img/pin56.png"/>
+                    <h1 style="color:black" >Cordoba, Cordoba, Argentina</h1>
+                </a>
+            </div>          
+        </div>
+        <!-- DIBUJA UNA FILA CON 10% DE LA PANTALLA -->
+
+        <div class="rowcolumn">
+
+            <div class="data">
+                <h1 style="color:black">CONTACTANOS</h1>
+            </div>
+
+        </div>
+        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y PARTE VERTICALMETEN EN 2 (50%)-->
+
+        <div class="row2column">
+
+            <div class="data">
+                <a href="tel:+543535644404">
+                    <img src="Resources/img/whatsapp.png" class="agitar"/>
+                </a>
+                <h1>+54-353-5 64 44 04</h1>
+
+            </div>
+
+        </div>
+        <!-- DIBUJA UNA FILA CON 40% DE LA PANTALLA Y PARTE VERTICALMETEN EN 2 (50%)-->
+        <div class="row2column">
+            <div class="data">
+               <a href="mailto:joseboretto@gmail.com?subject=Solicitud Zeditio">
+                <img src="Resources/img/email19.png" class="agitar"/>
+            </a>
+            <h1>joseboretto@gmail.com</h1>
+            
+        </div>     
+        
+    </div>
 </div>
+<!-- LIBRERIAS PARA LAS PARTICULAS-->
 
-</body>
+<script src="Resources/particulas/particles.js"></script>
+<script src="Resources/particulas/js/app.js"></script> 
+
+</body> 
+
+
 </html>
