@@ -17,14 +17,25 @@
 	/* Style for our header texts
 	* --------------------------------------- */
 	h1{
-		font-size: 5em;
+		font-size: 10em;
 		font-family: arial,helvetica;
 		color: #fff;
 		margin:0;
+		padding:0;
 	}
-	.intro p{
-		color: #fff;
+	h2{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #000;
+		margin:0;
+		padding:0;
 	}
+	p{
+		font-size: 4em;
+		font-style: italic;
+		color: #C63D0F;
+	}
+
 
 	/* Centered texts in each section
 	* --------------------------------------- */
@@ -32,13 +43,50 @@
 		text-align:center;
 	}
 
-	/* Overwriting styles for control arrows for slides
+
+	/* Backgrounds will cover all the section
 	* --------------------------------------- */
-	.controlArrow.prev {
-		left: 50px;
+	.section{
+		background-size: cover;
 	}
-	.controlArrow.next{
-		right: 50px;
+	.slide{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section0{
+		background-image: url(bg2.jpg);
+		text-shadow: 0px 0px 100px #000;
+		padding: 10% 0 0 0;
+	}
+
+	#section1{
+		background-color: #C63D0F;
+		padding: 6% 0 0 0;
+	}
+	#section1 p{
+		color: #fff;
+	}
+
+	#section2{
+		background-color: #01020d;
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+
+
+ 	/*Adding background for the slides
+	* --------------------------------------- */
+	#slide1{
+		background-image: url(imgs/bg2.jpg);
+		padding: 6% 0 0 0;
+	}
+	#slide2{
+		background-image: url(imgs/bg5.jpg);
+		padding: 6% 0 0 0;
 	}
 
 
@@ -55,10 +103,8 @@
 		</script>
 	<![endif]-->
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
-	<script type="text/javascript" src="fullPage/vendors/jquery.slimscroll.min.js"></script>
 
 	<script type="text/javascript" src="fullPage/jquery.fullPage.js"></script>
 	<script type="text/javascript" src="fullPage/examples.js"></script>
@@ -66,11 +112,8 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				
-				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
-				navigation: false,
-				navigationPosition: 'left',
-				navigationTooltips: ['First page', 'Second page', 'Third and last page']
+				verticalCentered: false
+
 			});
 		});
 	</script>
@@ -78,28 +121,18 @@
 </head>
 <body>
 
-
 <div id="fullpage">
-	<div class="section " id="section0">
-		<div class="intro">
-			<h1>Zeditio</h1>
-			<p>"If you can imagine it we can build it"</p>
-		</div>
+	<div class="section " id="section0"><h1>Zeditio</h1>
+		<p>"Software para el mundo"</p>
 	</div>
-	<div class="section " id="section1">
-		<div class="intro">
-			<h1>Que hacemos?</h1>
-			<p>Somos un equipo preparado para brindarle las soluciones de software
-			 que usted necesita</p>
-		</div>
-	</div>
-	<div class="section" id="section2">
-		<div class="intro">
-			<h1>Enjoy it</h1>
-		</div>
-	</div>
-</div>
 
+	<div class="section" id="section1"><h2>Que hacemos?</h2>
+			<p>Somos un equipo preparado para brindarle las soluciones de software
+			 que usted necesita</p></div>
+	<div class="section" id="section2"><h1>Expect Us!</h1>
+			
+			</div>
+</div>
 
 </body>
 </html>
