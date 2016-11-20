@@ -11,3 +11,6 @@ Se basa en la idea de la pagina de una consultora de software.
 
 - https://varvy.com/mobile/
 
+### Puede tardar en cargar el GIF
+![alt tag](https://github.com/zeditio/zeditio.xyz/blob/master/presentacion.gif)
+
